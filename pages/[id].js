@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
-import Comments from '../components/Comment';
+import Comment from '../components/Comment';
 import Login from '../components/Login';
 import Modal from '../components/Modal';
 import Post from '../components/Post';
@@ -77,7 +77,7 @@ const PostPage = ({ trendingResults, followResults, providers }) => {
           {comments.length > 0 && (
             <div className='pb-72'>
               {comments.map((comment) => (
-                <Comments
+                <Comment
                   key={comment.id}
                   id={comment.id}
                   comment={comment.data()}
